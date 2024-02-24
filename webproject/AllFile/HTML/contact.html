@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <title>التواصل</title>
+    <link rel="stylesheet" href="../CSS/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body dir="rtl">
+    <!--header-->
+    <header>
+        <nav>
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="chbtn">
+                <i class="fa-solid fa-bars" style="color: #dcdfe5;"></i></label>
+            <ul>
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="../HTML/page1.html">من نحن</a></li>
+                <li><a href="../HTML/form.html">الحجز</a></li>
+                <li><a href="../HTML/contact.html">تواصل</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <!--form-->
+            <form id="insertcontact">
+                <p> تواصل معنا</p>
+                <!--name-->
+                <input type="text" id="Firstname" name="Firstname" placeholder="الاسم" required minlength="2" maxlength="10">
+                <!--email-->
+                <input type="email" id="email" name="email" placeholder="البريد الإلكروني" required minlength="6" maxlength="100"
+                    pattern="[a-zA-Z0-9_-]+@[[a-zA-Z0-9]+\.[a-zA-Z]{2,4}\.[a-zA-Z]">
+                <!--mobile-->
+                <input type="text" id="mobile" placeholder="رقم الجوال" minlength="10" maxlength="10"
+                    pattern="[0-9]{10}">
+                <!--language for contact-->
+                <input type="text" id="textListL" name="textListL" placeholder="اللغة" list="lang">
+                <datalist id="lang">
+                    <option value="العربية"></option>
+                    <option value="English"></option>
+                    <option value="Pakistani"></option>
+                </datalist>
+                <!--notes-->
+                <h4>الملاحظات</h4>
+                <textarea id="textar" name="textar" cols="25" rows="5" required></textarea>
+                <!--submition-->
+                <input type="submit" id="button" value="ارسال">
+
+            </form>
+            <!--the logo-->
+            <img src="../Media/logo.png" alt="logo">
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer" id="footer">
+            <div class="row">
+                <ul>
+                    <li><a href="../HTML/contact.html">تواصل</a></li>
+                    <li><a href="../HTML/page1.html">من نحن</a></li>
+                    <li><a href="../index.html">الرئيسية</a></li>
+                </ul>
+            </div>
+            <h3 class="row">صُنــع من قبل فريـق معلـقاتنا امتداد أمجـاد</h3>
+        </div>
+    </footer>
+    <script src="../JavaScript/script2.js"></script>
+</body>
+</html>

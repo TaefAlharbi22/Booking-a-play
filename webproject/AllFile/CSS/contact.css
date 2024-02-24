@@ -1,0 +1,305 @@
+@import url(https://fonts.googleapis.com/earlyaccess/amiri.css);
+* {
+    padding: 0;
+    margin: 0;
+    font-family:'Amiri', serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+}
+
+:root {
+    --bg-color: #201814ce;
+    --second-bg-color: #F2EAD3;
+    --text-color: #fff;
+    --second-color: #ccc;
+    --main-color: #7b7668;
+}
+body {
+  background:var(--bg-color);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: all .45s ease;
+}
+
+
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 50px;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+a:hover{
+    color: rgba(255, 255, 255, 0.15);
+    transition: .5s;
+}
+.chbtn{
+    font-size: 25px;
+    color: white;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#checkbox{
+    display: none;
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+ 
+.container form {
+    width: 570px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+p{
+    font-size: 50px;
+    margin-bottom: 20px;
+    margin-right: 60px;
+    color:var(--text-color);
+    width: 100%;
+}
+
+.container form input {
+    width: 200px;
+    height: 50px;
+    padding-right: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    background: none;
+    border-bottom: 2px solid var(--main-color);
+    margin-left: 20px;
+    
+}
+
+.container form input::placeholder {
+    color: var(--text-color);
+}
+
+.container form h4 {
+    font-weight: 200;
+    width: 500px;
+    margin-top: 20px;
+    color: var(--text-color);
+    padding-right: 30px;
+}
+
+.container form textarea {
+    background: none;
+    border: none;
+    border: 1px solid var(--main-color);
+    color: #fff;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 450px;
+    max-width: 450px;
+    min-height: 60px;
+    max-height: 60px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color:var(--bg-color);
+}
+
+.container form #button {
+    border: none;
+    background: var(--main-color);
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--text-color);
+    width: 100px;
+    margin-right: 70px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.container form #button:hover {
+    opacity: 0.7;
+}
+
+img{
+    margin-right: 140px;
+}
+
+
+.footer{
+    margin-top: 10%;
+    background:#2018143a;
+    padding:30px 0px;
+    text-align:center;
+    width: 100%;   
+}
+    
+.footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:10px;
+    color:gray;
+    font-size:0.9em;
+}
+    
+.footer .row a{
+    text-decoration:none;
+    color:gray;
+}
+    
+.footer .row a:hover{
+    color:#fff;
+}
+    
+.footer .row ul{
+    width:100%;
+}
+    
+.footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+}
+    
+.footer .row a i{
+    font-size:10px;
+}
+
+@media(max-width:858px) {
+
+    .chbtn {
+        display: block;
+        margin-right: 350px;
+    }
+
+     nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:#20181472;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transform: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 20px 0;
+        line-height: 30px;
+
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    #checkbox:checked~ul {
+        left: 0;
+    }
+   
+    .container form {
+        width: 470px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.1);
+        flex-wrap: wrap;
+    }
+
+    .container form input {
+        height: 20px;
+        padding-right: 10px;
+        outline: none;
+        border: none;
+        font-size: 15px;
+        margin-bottom: 20px;
+        background: none;
+        border-bottom: 2px solid var(--main-color);
+        margin-left: 20px;
+    }
+
+    .container form textarea {
+        background: none;
+        border: none;
+        border-bottom: 2px solid var(--main-color);
+        color: #fff;
+        font-weight: 100;
+        font-size: 15px;
+        padding: 10px;
+        outline: none;
+        min-width: 400px;
+        max-width: 400px;
+        min-height: 30px;
+        max-height: 30px;
+    }
+
+    .container form #button {
+        border: none;
+        background: var(--main-color);
+        border-radius: 5px;
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 20px;
+        color: var(--text-color);
+        width: 100px;
+        margin-right: 300px;
+        margin-bottom: 30px;
+        transition: 0.3s;
+        height: 40px;
+    }
+
+    .container form h4 {
+        font-weight: 200;
+        width: 600px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    img{
+        display: none;
+    }
+
+}

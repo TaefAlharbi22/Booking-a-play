@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <title>الحجز</title>
+    <link rel="stylesheet" href="../CSS/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body dir="rtl">
+    <!--header-->
+    <header>
+        <nav>
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="chbtn">
+                <i class="fa-solid fa-bars" style="color: #dcdfe5;"></i></label>
+            <ul>
+                <li><a href="../index.html">الرئيسية</a></li>
+                <li><a href="../HTML/page1.html">من نحن</a></li>
+                <li><a href="../HTML/form.html">الحجز</a></li>
+                <li><a href="../HTML/contact.html">تواصل</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <!--form-->
+            <form id="insertForm">
+                <!--first name-->
+                <input type="text" id="Firstname" name="Firstname" placeholder="الاسم الاول" required minlength="2" maxlength="10"
+                    >
+                <!--last name-->
+                <input type="text" id="Lastname" name="Lastname" placeholder="الاسم الاخير" minlength="2"
+                   >
+                <!--gender-->
+                <input type="text" id="gender" name="gender" placeholder="الجنس" list="genderLis" required>
+                <datalist id="genderLis">
+                    <option value="انثى"></option>
+                    <option value="ذكر"></option>
+                </datalist>
+                <!--date of berth-->
+                <input type="date" id="berthDate" name="berthDate" required>
+                <!--email-->
+                <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" required minlength="6" maxlength="100"
+                    pattern="[a-zA-Z0-9_-]+@[[a-zA-Z0-9]+\.[a-zA-Z]{2,4}\.[a-zA-Z]">
+                <!--mobile-->
+                <input type="text" id="mobile" name="mobile" placeholder="رقم الجوال" required minlength="10" maxlength="10"
+                    pattern="[0-9]{10}">
+                <!--sections-->
+                <input type="text" id="section" name="section" placeholder="المعلقة" list="sections" required>
+                <datalist id="sections" name="sections">
+                    <option value="جميع المعلقات"></option>
+                    <option value="معلقة الملك عبدالعزيز"></option>
+                    <option value="معلقة الملك سعود"></option>
+                    <option value="معلقة الملك فيصل"></option>
+                    <option value="معلقة الملك خالد"></option>
+                    <option value="معلقة الملك فهد"></option>
+                    <option value="معلقة الملك عبدالله"></option>
+                    <option value="معلقة الملك سلمان"></option>
+                    <option value="معلقة ولي العهد محمد "></option>
+                </datalist>
+                <!--categorys-->
+                <input type="text" id="category" name="category" placeholder="الفئة" list="categorys" required>
+                <datalist id="categorys" name="categorys">
+                    <option value="رويال"></option>
+                    <option value="الماسية"></option>
+                    <option value="الذهبية"></option>
+                    <option value="الفضية"></option>
+                    <option value="البرونزية"></option>
+                </datalist>
+                 <!--Ticket numbers-->
+                <input type="text" id="Ticketnumber" name="Ticketnumber" placeholder="عدد التــذاكر" list="Tickets" required>
+                <datalist id="Tickets" name="Tickets">
+                    <option value="1"></option>
+                    <option value="2"></option>
+                    <option value="3"></option>
+                    <option value="4"></option>
+                </datalist>
+                     <!--Ticket time-->
+                <input type="text" id="time" name="time" placeholder="الوقــت " list="times" required>
+                <datalist id="times" name="times">
+                    <option value="3 pm"></option>
+                    <option value="6 pm"></option>
+                    <option value="11 pm"></option>
+                </datalist>
+                <!--submition-->
+                <input type="submit" id="button" value="حجز">
+
+            </form>
+        </div>
+        <div id="dataContainer">
+            <h2>شــكـرا لحــجـزك</h2>
+            <ul id="dataList"></ul>
+        </div>
+    </main>
+    <!--footer-->
+	<footer>
+		<div class="footer" id="footer">
+		<div class="row">
+		<ul>
+            <li><a href="contact.html">تواصل</a></li>
+            <li><a href="page1.html">من نحن</a></li>
+            <li><a href="../index.html">الرئيسية</a></li>
+		</ul>
+		</div>
+		<h3 class="row">صُنــع من قبل فريـق معلـقاتنا امتداد أمجـاد</h3>
+		</div>
+	</footer>
+    <script src="../JavaScript/script.js"></script>
+</body>
+
+</html>
